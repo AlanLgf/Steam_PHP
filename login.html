@@ -41,7 +41,6 @@
 								<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
 								<li><a href="store.html" class="mon_scroll">STORE</a></li>
 								<li><a href="index.php" class="mon_scroll">ACTUALITÉS</a></li>
-
 							</ul>	
 							<ul class="nav navbar-nav navbar-right">
 
@@ -69,11 +68,17 @@
 <div class="main1" id="main1">
 	<section class="container">
 		<div class="row">
-			<h1>BIBLIOTHEQUE</h1>
+			<h1>LOG IN</h1>
 			<div class="trait"></div>
+
+
+				<form action="connexion_php.php" method="post" class="inscription">
+					<label for="pseudo">Pseudo :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
+					<label for="mdp">Mot de passe :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
+					<input type="submit" value="Se connecter">
+				</form>
 		</div>
-	</div>
-</section>
+	</section>
 </div>
 <footer id="footer">
 	<section class="container">

@@ -22,6 +22,48 @@
 <?php include("conf/db.php"); ?>
 
 	<header id="header">
+	
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			     <p>ACTU JEUX 1</p>
+			      <div class="carousel-caption">
+			    
+			      </div>
+			    </div>
+			    <div class="item">
+			      <p>ACTU JEUX 2</p>
+			      <div class="carousel-caption">
+			       
+			      </div>
+			    </div>
+			    <div class="item">
+			      <p>ACTU JEUX 3</p>
+			      <div class="carousel-caption">
+			       
+			      </div>
+			    </div>
+			  </div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+
 		<div class="menu">
 			<section class="container">
 
@@ -39,22 +81,22 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-fixed-top ">
-								<li><a href="#main2" class="mon_scroll">SIGN IN</a></li>
-								<li><a href="#main3" class="mon_scroll">LOG IN</a></li>
-								<li><a href="store.html" class="mon_scroll">STORE</a></li>
+								<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
+								<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
 								<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
-								<li><a href="#main1" class="mon_scroll">ACCUEIL</a></li>
+								<li><a href="store.html" class="mon_scroll">STORE</a></li>
+								<li><a href="#main1" class="mon_scroll">ACTUALITÉS</a></li>
 							</ul>	
 							<ul class="nav navbar-nav navbar-right">
 
 								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
 									<ul class="dropdown-menu">
-										<li><a href="#main2" class="mon_scroll">SIGN IN</a></li>
-										<li><a href="#main3" class="mon_scroll">LOG IN</a></li>
-										<li><a href="store.html" class="mon_scroll">STORE</a></li>
+										<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
+										<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
 										<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
-										<li><a href="#main1" class="mon_scroll">ACCUEIL</a></li>
+										<li><a href="store.html" class="mon_scroll">STORE</a></li>
+										<li><a href="#main1" class="mon_scroll">ACTUALITÉS</a></li>
 									</ul>
 								</li>
 
@@ -63,7 +105,6 @@
 					</div><!-- /.container-fluid -->
 				</nav>
 
-			-->
 		</section>
 	</div>
 
@@ -71,58 +112,13 @@
 <div class="main1" id="main1">
 	<section class="container">
 		<div class="row">
-			<h1>ACCUEIL</h1>
+			<h1>ACTUALITÉS</h1>
 			<div class="trait"></div>
 		</div>
 	</div>
 </section>
 </div>
-<div class="main2" id="main2">
-	<section class="container">
-		<div class="row">
-			<h1>SIGN IN</h1>
-			<div class="trait"></div>
-			<form action="signin.php" method="post">
-					<label for="pseudo">Prenom :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
-					<label for="mdp">Nom :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
-					<label for="pseudo">Date de Naissance :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
-					<label for="pseudo">Pseudo :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
-					<label for="mdp">Mot de passe :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
-					<label for="mdp">Adresse :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
-					<label for="mdp">Ville :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
-					<label for="mdp">Email :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
-					<label for="mdp">Téléphone :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
-					<input type="submit" value="Se connecter">
-				</form>	
-		</div>
-	</section>
-</div>	
-<div class="main3" id="main3">
-	<section class="container">
-		<div class="row">
-			<h1>LOG IN</h1>
-			<div class="trait"></div>
 
-
-				<form action="connexion_php.php" method="post">
-					<label for="pseudo">Pseudo :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
-					<label for="mdp">Mot de passe :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
-					<input type="submit" value="Se connecter">
-				</form>
-		</div>
-	</section>
-</div>
-<!--<div class="main4" id="main4">
-	<section class="container">
-		<div class="row">
-			<h1></h1>
-			<div class="trait"></div>
-			<div class="col-md-12">
-
-			</div>
-		</div>
-	</section>
-</div>	-->
 <footer id="footer">
 	<section class="container">
 		<div class="row">
