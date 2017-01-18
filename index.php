@@ -114,6 +114,38 @@
 		<div class="row">
 			<h1>ACTUALITÉS</h1>
 			<div class="trait"></div>
+			<div class="col-md-4">
+				<div class="img_jeux">
+					<img src="https://articles-images.sftcdn.net/wp-content/uploads/sites/9/2016/02/gta5_1-664x374.jpg" width="100%">
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="img_jeux">
+					<img src="https://articles-images.sftcdn.net/wp-content/uploads/sites/9/2016/02/gta5_1-664x374.jpg" width="100%">	
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="img_jeux">
+					<img src="https://articles-images.sftcdn.net/wp-content/uploads/sites/9/2016/02/gta5_1-664x374.jpg"  width="100%">	
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="img_jeux">
+					<img src="https://articles-images.sftcdn.net/wp-content/uploads/sites/9/2016/02/gta5_1-664x374.jpg" width="100%">	
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="img_jeux">
+					<img src="https://articles-images.sftcdn.net/wp-content/uploads/sites/9/2016/02/gta5_1-664x374.jpg" width="100%">	
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="img_jeux">
+					<img src="https://articles-images.sftcdn.net/wp-content/uploads/sites/9/2016/02/gta5_1-664x374.jpg" width="100%">	
+				</div>
+			</div>
+
+		</div>	
 		</div>
 	</div>
 </section>

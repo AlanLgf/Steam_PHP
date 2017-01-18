@@ -83,4 +83,13 @@ h1 {
   padding: 6px 0 6px 0;
   color: #fff;
 }
-
+.img_jeux{
+  padding: 0 0 50px 0;
+  height: 270px;
+  width: 100%;
+  margin: 0 1em 0 0;
+}
+.img_jeux:hover{
+   -webkit-filter: saturate(50%);
+   cursor: pointer;
+}
