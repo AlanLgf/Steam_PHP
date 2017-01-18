@@ -18,6 +18,9 @@
 </head>
 <body>	
 
+<?php session_start(); ?>
+<?php include("conf/db.php"); ?>
+
 	<header id="header">
 		<div class="menu">
 			<section class="container">
@@ -78,7 +81,19 @@
 	<section class="container">
 		<div class="row">
 			<h1>SIGN IN</h1>
-			<div class="trait"></div>	
+			<div class="trait"></div>
+			<form action="signin.php" method="post">
+					<label for="pseudo">Prenom :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
+					<label for="mdp">Nom :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
+					<label for="pseudo">Date de Naissance :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
+					<label for="pseudo">Pseudo :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
+					<label for="mdp">Mot de passe :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
+					<label for="mdp">Adresse :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
+					<label for="mdp">Ville :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
+					<label for="mdp">Email :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
+					<label for="mdp">Téléphone :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
+					<input type="submit" value="Se connecter">
+				</form>	
 		</div>
 	</section>
 </div>	
@@ -88,11 +103,10 @@
 			<h1>LOG IN</h1>
 			<div class="trait"></div>
 
-			<?php session_start(); ?>
-				<?php include("conf/db.php"); ?>
+
 				<form action="connexion_php.php" method="post">
 					<label for="pseudo">Pseudo :</label><input id="pseudo" name="pseudo" type="text" placeholder="Votre pseudo..." />
-					<label for="mdp">Mot de passe :</label><input id="mdp" name="password" type="text" placeholder="Votre mot de passe..." />
+					<label for="mdp">Mot de passe :</label><input id="mdp" name="password" type="password" placeholder="Votre mot de passe..." />
 					<input type="submit" value="Se connecter">
 				</form>
 		</div>
