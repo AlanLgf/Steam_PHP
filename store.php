@@ -18,6 +18,9 @@
 </head>
 <body>	
 
+	<?php session_start(); ?>
+	<?php include("conf/db.php"); ?>
+
 	<header id="header">
 		<div class="menu">
 			<section class="container">
@@ -39,7 +42,7 @@
 								<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
 								<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
 								<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
-								<li><a href="store.html" class="mon_scroll">STORE</a></li>
+								<li><a href="store.php" class="mon_scroll">STORE</a></li>
 								<li><a href="index.php" class="mon_scroll">ACTUALITÉS</a></li>
 							</ul>	
 							<ul class="nav navbar-nav navbar-right">
@@ -50,7 +53,7 @@
 										<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
 										<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
 										<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
-										<li><a href="store.html" class="mon_scroll">STORE</a></li>
+										<li><a href="store.php" class="mon_scroll">STORE</a></li>
 										<li><a href="index.php" class="mon_scroll">ACTUALITÉS</a></li>
 									</ul>
 								</li>
@@ -70,6 +73,18 @@
 		<div class="row">
 			<h1>STORE</h1>
 			<div class="trait"></div>
+			<div class="shop">
+			<?php
+			$jeux = array ('id', 'categorie', 'nom', 'description', 'date de mise en ligne', 'version', 'prix', 'images');
+			 $requete = $db->prepare("SELECT id, categorie, nom, description, date_de_mise_en_ligne, version, prix, images FROM livreor ORDER BY datemsg DESC;");
+    $requete -> execute(
+        array(
+        'pseudo' => $pseudo,
+        'password' => $password,
+        )
+    );
+			?>
+			</div>
 		</div>
 	</div>
 </section>

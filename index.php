@@ -84,7 +84,7 @@
 								<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
 								<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
 								<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
-								<li><a href="store.html" class="mon_scroll">STORE</a></li>
+								<li><a href="store.php" class="mon_scroll">STORE</a></li>
 								<li><a href="#main1" class="mon_scroll">ACTUALITÉS</a></li>
 							</ul>	
 							<ul class="nav navbar-nav navbar-right">
@@ -95,7 +95,7 @@
 										<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
 										<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
 										<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
-										<li><a href="store.html" class="mon_scroll">STORE</a></li>
+										<li><a href="store.php" class="mon_scroll">STORE</a></li>
 										<li><a href="#main1" class="mon_scroll">ACTUALITÉS</a></li>
 									</ul>
 								</li>
