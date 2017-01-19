@@ -76,13 +76,12 @@
 			<div class="shop">
 			<?php
 			$jeux = array ('id', 'categorie', 'nom', 'description', 'date de mise en ligne', 'version', 'prix', 'images');
-			 $requete = $db->prepare("SELECT id, categorie, nom, description, date_de_mise_en_ligne, version, prix, images FROM livreor ORDER BY datemsg DESC;");
-    $requete -> execute(
-        array(
-        'pseudo' => $pseudo,
-        'password' => $password,
-        )
-    );
+			 $requete = $jeux->prepare("SELECT id, categorie, nom, description, date_de_mise_en_ligne, version, prix, images FROM livreor ORDER BY datemsg DESC;");
+			if (!isset($_SESSION['count'])) {
+			$_SESSION['count'] = 0;
+			} else {
+			$_SESSION['count']++;
+			}
 			?>
 			</div>
 		</div>
