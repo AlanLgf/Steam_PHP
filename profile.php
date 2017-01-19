@@ -1,23 +1,23 @@
  <?php session_start();?>
  <?php include("conf/db.php"); ?>
  <?php
- $request = $db->prepare("SELECT * FROM joueurs");
+ /*$request = $db->prepare("SELECT * FROM joueurs");
 		    $request->execute
 		    (
 		        array
 		        (
 		           
 		        )
-		    );
-		    /*$member_id=htmlspecialchars($_SESSION["id_member"]);
-		    $request=$db->prepare("SELECT comments_news.id, comments_news.content, comments_news.comment_date, pseudo FROM comments_news JOIN members ON comments_news.member_id = members.id WHERE member_id = :member_id");
+		    );*/
+		    $member_id=htmlspecialchars($_SESSION["id_member"]);
+		    $request=$db->prepare("SELECT id, Prenom, Nom, Pseudo, Date_Naissance, Date_Inscription, Adresse, Ville, Téléphone, Email, Motdepasse FROM joueurs WHERE id = :id");
 		    $request->execute
 		    (
 		        array
 		        (
-		           "member_id" => $member_id
+		           "id" => $member_id
 		        )
-		    );*/
+		    );
 		    while ($data = $request->fetch())
 		    {
 		    	if(isset($_SESSION["id_member"]))

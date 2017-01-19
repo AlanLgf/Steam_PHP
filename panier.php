@@ -55,7 +55,7 @@ function supprimePanier(){
 }
 ?>
 
-<?php
+
 
 <form method="post" action="panier.php">
 <table style="width: 400px">
@@ -68,7 +68,7 @@ function supprimePanier(){
 		<td>Prix Unitaire</td>
 		<td>Action</td>
 	</tr>
-
+<?php
 	if (creationPanier())
 	{
 		$nbArticles=count($_SESSION['panier']['libelleProduit']);
