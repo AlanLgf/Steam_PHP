@@ -81,9 +81,9 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-fixed-top ">
-								<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
-								<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
-								<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
+								<li><a href="signin.php" class="mon_scroll">SIGN IN</a></li>
+								<li><a href="login.php" class="mon_scroll">LOG IN</a></li>
+								<li><a href="bibliotheque.php" class="mon_scroll">BIBLIOTHEQUE</a></li>
 								<li><a href="store.php" class="mon_scroll">STORE</a></li>
 								<li><a href="#main1" class="mon_scroll">ACTUALITÉS</a></li>
 							</ul>	
@@ -92,9 +92,9 @@
 								<li class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
 									<ul class="dropdown-menu">
-										<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
-										<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
-										<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
+										<li><a href="signin.php" class="mon_scroll">SIGN IN</a></li>
+										<li><a href="login.php" class="mon_scroll">LOG IN</a></li>
+										<li><a href="bibliotheque.php" class="mon_scroll">BIBLIOTHEQUE</a></li>
 										<li><a href="store.php" class="mon_scroll">STORE</a></li>
 										<li><a href="#main1" class="mon_scroll">ACTUALITÉS</a></li>
 									</ul>
