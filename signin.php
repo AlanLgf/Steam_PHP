@@ -70,33 +70,33 @@
 </header>
 
 <?php
-if (isset($_POST["Prenom"]) 
-&&  isset($_POST["Nom"])
-&&  isset($_POST["Date_Naissance"]) 
-&&  isset($_POST["Pseudo"])
-&&  isset($_POST["Adresse"]) 
-&&  isset($_POST["Ville"])
-&&  isset($_POST["Téléphone"]) 
-&&  isset($_POST["Email"]) 
-&&  isset($_POST["Motdepasse"]))
+if (isset($_POST["prenom"]) 
+&&  isset($_POST["nom"])
+&&  isset($_POST["datenaissance"]) 
+&&  isset($_POST["pseudo"])
+&&  isset($_POST["adresse"]) 
+&&  isset($_POST["ville"])
+&&  isset($_POST["telephone"]) 
+&&  isset($_POST["email"]) 
+&&  isset($_POST["motdepasse"]))
 {
 
 
-	$Prenom	 		= htmlspecialchars($_POST["Prenom"]);
-	$Nom	 		= htmlspecialchars($_POST["Nom"]);
-	$Date_Naissance = htmlspecialchars($_POST["Date_Naissance"]);
-	$Pseudo	 		= htmlspecialchars($_POST["Pseudo"]);
-	$Adresse 		= htmlspecialchars($_POST["Adresse"]);
-	$Ville			= htmlspecialchars($_POST["Ville"]);
-	$Téléphone	 	= htmlspecialchars($_POST["Téléphone"]);
-	$Email 			= htmlspecialchars($_POST["Email"]);
-	$Motdepasse 	= htmlspecialchars($_POST["Motdepasse"]);
+	$prenom			= htmlspecialchars($_POST["prenom"]);
+	$nom	 		= htmlspecialchars($_POST["nom"]);
+	$datenaissance  = htmlspecialchars($_POST["datenaissance"]);
+	$pseudo	 		= htmlspecialchars($_POST["pseudo"]);
+	$adresse 		= htmlspecialchars($_POST["adresse"]);
+	$ville			= htmlspecialchars($_POST["ville"]);
+	$telephone	 	= htmlspecialchars($_POST["telephone"]);
+	$email 			= htmlspecialchars($_POST["email"]);
+	$motdepasse 	= htmlspecialchars($_POST["motdepasse"]);
 
-	$request = $db->prepare("SELECT id FROM joueurs WHERE Pseudo LIKE :Pseudo OR Email LIKE :Email");
+	$request = $db->prepare("SELECT id FROM joueurs WHERE Pseudo LIKE :pseudo OR Email LIKE :email");
 	$request -> execute(
 		array(
-		'Pseudo' => $Pseudo,
-		'Email' => $Email
+		'pseudo' => $pseudo,
+		'email' => $email
 		)
 	);
 
@@ -105,22 +105,22 @@ if (isset($_POST["Prenom"])
 	if (sizeof($joueurs)== 0 ) {
 
 
-			$request = $db->prepare("INSERT INTO joueurs (Prenom, Nom, Date_Naissance, Pseudo, Adresse, Ville, Téléphone, Email, Motdepasse, Date_Inscription) VALUES (:Prenom, :Nom, :Date_Naissance, :Pseudo, :Adresse, :Ville, :Téléphone, :Email, :Motdepasse, NOW())");
+			$request = $db->prepare("INSERT INTO joueurs (Prenom, Nom, Date_Naissance, Pseudo, Adresse, Ville, Téléphone, Email, Motdepasse, Date_Inscription) VALUES (:prenom, :nom, :datenaissance, :pseudo, :adresse, :ville, :telephone, :email, :motdepasse, NOW())");
 			$request -> execute(
 				array(
-				'Prenom' => $Prenom,
-				'Nom' => $Nom,
-				'Date_Naissance' => $Date_Naissance,
-				'Pseudo' => $Pseudo,
-				'Adresse' => $Adresse,
-				'Ville' => $Ville,
-				'Téléphone' => $Téléphone,
-				'Email' => $Email,
-				'Motdepasse' => $Motdepasse
+				'prenom' => $prenom,
+				'nom' => $nom,
+				'datenaissance' => $datenaissance,
+				'pseudo' => $pseudo,
+				'adresse' => $adresse,
+				'ville' => $ville,
+				'telephone' => $telephone,
+				'email' => $email,
+				'motdepasse' => $motdepasse
 				)
 			);
+
 			$_SESSION["id_member"] = $db->lastInsertId(); 
-			header('Location: bibliotheque.php');
 
 	}else{
 		echo 'Error : this member already exists
@@ -138,15 +138,15 @@ if (isset($_POST["Prenom"])
 			<h1>SIGN IN</h1>
 			<div class="trait"></div>
 			<form action="signin.php" method="post" class="inscription">
-					<label for="Prenom">Prenom :</label><input id="Prenom" name="Prenom" type="text" placeholder="Prénom..." required/>
-					<label for="Nom">Nom :</label><input id="Nom" name="Nom" type="text" placeholder="Nom..." required />
-					<label for="Date_Naissance">Date de Naissance :</label><input id="Date_Naissance" name="Date_Naissance" type="date" required/>
-					<label for="Pseudo">Pseudo :</label><input id="Pseudo" name="Pseudo" type="text" placeholder="Pseudo..." required/>
-					<label for="Motdepasse">Mot de passe :</label><input id="Motdepasse" name="Motdepasse" type="password" placeholder="Mot de passe..." required/>
-					<label for="Adresse">Adresse :</label><input id="Adresse" name="Adresse" type="text" placeholder="Adresse..." required/>
-					<label for="Ville">Ville :</label><input id="Ville" name="Ville" type="text" placeholder="Ville..." required/>
-					<label for="Email">Email :</label><input id="Email" name="Email" type="email" placeholder="Email..." required/>
-					<label for="Téléphone">Téléphone :</label><input id="Téléphone" name="Téléphone" type="tel" placeholder="Téléphone..." required/>
+					<label for="Prenom">Prenom :</label><input id="Prenom" name="prenom" type="text" placeholder="Prénom..." required/>
+					<label for="Nom">Nom :</label><input id="Nom" name="nom" type="text" placeholder="Nom..." required />
+					<label for="Date_Naissance">Date de Naissance :</label><input id="Date_Naissance" name="datenaissance" type="date" required/>
+					<label for="Pseudo">Pseudo :</label><input id="Pseudo" name="pseudo" type="text" placeholder="Pseudo..." required/>
+					<label for="Motdepasse">Mot de passe :</label><input id="Motdepasse" name="motdepasse" type="password" placeholder="Mot de passe..." required/>
+					<label for="Adresse">Adresse :</label><input id="Adresse" name="adresse" type="text" placeholder="Adresse..." required/>
+					<label for="Ville">Ville :</label><input id="Ville" name="ville" type="text" placeholder="Ville..." required/>
+					<label for="Email">Email :</label><input id="Email" name="email" type="email" placeholder="Email..." required/>
+					<label for="Téléphone">Téléphone :</label><input id="Téléphone" name="telephone" type="tel" maxlength="10" placeholder="Téléphone..." required/>
 					<input type="submit" value="S'inscrire">
 				</form>	
 		</div>
