@@ -29,15 +29,7 @@
 			<div class="trait"></div>
 			<?php
 $member_id=htmlspecialchars($_SESSION["id_member"]);
-		    $request=$db->prepare("SELECT id FROM joueurs WHERE id = :id");
-		    $request->execute
-		    (
-		        array
-		        (
-		           "id" => $member_id
-		        )
-		    );
-		    $request=$db->prepare("SELECT joueurs_id, jeux_id, jeux.Nom FROM bibliotheque JOIN jeux ON bibliotheque.jeux_id = jeux.id WHERE joueurs_id = :id");
+		    $request=$db->prepare("SELECT joueurs_id, jeux_id, jeux.Nom, jeux.Image FROM bibliotheque JOIN jeux ON bibliotheque.jeux_id = jeux.id WHERE joueurs_id = :id");
 		    $request->execute
 		    (
 		        array
@@ -47,8 +39,8 @@ $member_id=htmlspecialchars($_SESSION["id_member"]);
 		    );
 		    while($data = $request->fetch())
 		    {
-		    	echo "ID du jeu : " . $data["jeux_id"] . "<br>";
 		    	echo "Nom du jeu : " . $data["Nom"] . "<br>";
+		    	echo  "<img src='" . $data['Image'] . "'" . "width='100%'>" ;
 		    }
 
 		echo "ID du joueur : " . $member_id;
