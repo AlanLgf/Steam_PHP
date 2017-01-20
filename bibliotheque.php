@@ -52,7 +52,6 @@ $member_id=htmlspecialchars($_SESSION["id_member"]);
 		    	<?php
 		    }
 
-		echo "ID du joueur : " . $member_id;
 		
 ?>
 <!--</div>-->
