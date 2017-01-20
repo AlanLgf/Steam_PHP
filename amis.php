@@ -10,5 +10,6 @@ include("conf/db.php");
 				'joueur_id' => $id
 				)
 			);
+	header("Location:friend_list.php"); 
 	//echo $request->queryString;
 ?>

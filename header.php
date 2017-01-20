@@ -31,6 +31,7 @@
                 				{ 
 									?>
 									<li><a href="bibliotheque.php" class="mon_scroll">BIBLIOTHEQUE</a></li>
+									<li><a href="friend_list.php" class="mon_scroll">MES AMIS</a></li>
 								<?php } ?>								
 								<li><a href="store.php" class="mon_scroll">STORE</a></li>
 								<li><a href="index.php" class="mon_scroll">ACTUALITÉS</a></li>
