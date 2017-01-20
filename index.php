@@ -80,7 +80,7 @@
 
                
 
-$request = $db->prepare("SELECT Image FROM jeux");
+$request = $db->prepare("SELECT Image FROM jeux LIMIT 6");
 $request -> execute(array());
 
 
@@ -91,13 +91,14 @@ while ($data = $request->fetch()) {
 
 			<div class="col-md-4">
 				<div class="img_jeux">
+					<a href="jeux.php">
 					<img src="<?php echo $data['Image']?>" width="100%">
+					</a>
 				</div>
 			</div>
-		
 
 <?php
-
+		
 }
 
 $request->closeCursor(); ?>
