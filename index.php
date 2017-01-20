@@ -20,6 +20,7 @@
 <body>	
 
 <?php include("conf/db.php"); ?>
+<?php include("header.php"); ?>
 
 	<header id="header">
 	
@@ -64,7 +65,7 @@
 			  </a>
 			</div>
 
-<?php include("header.php"); ?>
+
 
 
 </header>
