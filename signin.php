@@ -104,7 +104,7 @@ if (isset($_POST["prenom"])
 					<label for="Adresse">Adresse :</label><input id="Adresse" name="adresse" type="text" placeholder="Adresse..." required/>
 					<label for="Ville">Ville :</label><input id="Ville" name="ville" type="text" placeholder="Ville..." required/>
 					<label for="Email">Email :</label><input id="Email" name="email" type="email" placeholder="Email..." required/>
-					<label for="Téléphone">Téléphone :</label><input id="Téléphone" name="telephone" type="tel" maxlength="10" placeholder="Téléphone..." required/>
+					<label for="Téléphone">Téléphone :</label><input id="Téléphone" name="telephone" type="number" maxlength="10" placeholder="Téléphone..." required/>
 					<input type="submit" value="S'inscrire">
 				</form>	
 		</div>

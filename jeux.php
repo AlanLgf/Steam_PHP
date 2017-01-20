@@ -22,3 +22,37 @@
 <?php include("conf/db.php"); ?>
 <?php include("header.php"); ?>
 
+<?php
+
+	$id = htmlspecialchars($_GET["id"]);
+	$request = $db->prepare("SELECT Nom, Description, Date_Mise_En_Ligne, Version, Prix, Image FROM jeux WHERE jeux.id = :id");
+        $request->execute
+        (
+            array
+            (
+                "id"=>$id
+            )
+        );
+    while($data = $request->fetch())
+    {
+    	?>
+
+		 <div class="main1" id="main1">
+			<section class="container">
+				<div class="row">
+			<h1><?php echo $data['Nom']?></h1>
+			<div class="trait"></div>
+    	<?php
+    	echo "Nom du jeu : " . $data["Nom"] . "<br>";
+    	echo "Description : " . $data["Description"] . "<br>";
+    	echo "Date de mise en ligne : " . $data["Date_Mise_En_Ligne"] . "<br>";
+    	echo "Version : " . $data["Version"] . "<br>";
+    	echo "Prix : " . $data["Prix"] . "<br>";
+    	echo "<img src='" . $data["Image"] . "'>" . "<br>";
+    }
+
+?>
+	<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Acheter</a>
+
+</body>
+</html>
