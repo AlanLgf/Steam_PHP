@@ -52,6 +52,7 @@
     }
 
 ?>
+	<input type="submit" value="Acheter">
 
 </body>
 </html>
