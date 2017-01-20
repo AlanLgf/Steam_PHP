@@ -52,7 +52,7 @@
     }
 
 ?>
-	<input type="submit" value="Acheter">
+	<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Acheter</a>
 
 </body>
 </html>
