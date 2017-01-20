@@ -41,7 +41,7 @@ $member_id=htmlspecialchars($_SESSION["id_member"]);
 		    while($data = $request->fetch())
 		    {
 		    	?>
-		    	<div class="col-md-6">
+		    	<div class="col-md-6 col-xs-6">
 		    	<?php
 		    	echo "<p class='text_center'> Nom du jeu : " . $data["Nom"] . "<br> </p>"; ?>
 		    	</div>

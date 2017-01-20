@@ -1,3 +1,6 @@
+body {
+  overflow-x:hidden;
+}
 #header {
   background: #34495e;
 }
