@@ -23,22 +23,12 @@
 		<?php include("header.php"); ?>
 </header>
 
-
 <?php
 
-$joueur_id = $_SESSION["id_member"];
-    
-$request = $db->prepare("SELECT Pseudo FROM joueurs WHERE Pseudo != $joueur_id ");
+               
+
+$request = $db->prepare("SELECT id, joueurs_id1 FROM amis ");
 $request -> execute(array());
 
-while($data = $request->fetch())
-    {
-    	echo "Pseudo : " . $data["Pseudo"];
-    	?>
-    	<a href="#" class="btn btn-primary" role="button" aria-pressed="true">Ajouter</a> <br>
-    	<?php
-    	
-    	
-    }
-    ?>
 
+$request->closeCursor(); ?>
