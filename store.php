@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php include("conf/db.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +19,7 @@
 	</script>
 </head>
 <body>	
-
-	<?php session_start(); ?>
-	<?php include("conf/db.php"); ?>
+	
 
 	<header id="header">
 		<?php include("header.php"); ?>
@@ -29,27 +29,26 @@
 		<div class="row">
 			<h1>STORE</h1>
 			<div class="trait"></div>
+			<div class="col-md-12 col-xs-12 text-right">
+				<input id="input_jeu" type="text">
+			</div>
 			<?php
 
-               
+       
 
-$request = $db->prepare("SELECT id, Image FROM jeux ");
+$request = $db->prepare("SELECT id, Image, id_jeux, NomCatégorie, Nom FROM jeux JOIN catégorie WHERE id_jeux = id");
 $request -> execute(array());
 
-$request = $db->prepare("SELECT id_jeux, NomCatégorie  FROM catégorie JOIN jeux WHERE catégorie.id_jeux = jeux.id ");
-$request -> execute(
-	array(
-		)
-	);
 
 while ($data = $request->fetch()) {
 ?>
 
 
 
-			<div class="col-md-4">
+			<div class="col-md-4 container_jeu">
 			<?php echo $data['NomCatégorie']; ?>
 				<div class="img_jeux">
+					<p class="nom_jeu"><?php echo $data['Nom']; ?></p>
 					<a href="jeux.php?id=<?php echo $data['id']; ?>">
 						<img src="<?php echo $data['Image']?>" width="100%">
 					</a>
