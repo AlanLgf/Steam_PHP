@@ -19,6 +19,7 @@
 </head>
 <body>	
 
+
 <?php include("conf/db.php"); ?>
 <?php include("header.php"); ?>
 
@@ -34,25 +35,40 @@
 
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner" role="listbox">
-			    <div class="item active">
-			     <p>ACTU JEUX 1</p>
-			      <div class="carousel-caption">
+			   
+
+			    <?php
+               
+				$request = $db->prepare("SELECT id, Image FROM jeux LIMIT 3");
+				$request -> execute(array());
+				$i = 0;
+
+				while ($data = $request->fetch()) {
+				?>
+
+							<?php $i++; ?>
+							<?php if ($i == 1)
+							{
+								?>
+								<div class="item active">
+								<?php
+							} else{
+								 ?>
+									<div class="item">
+								 <?php
+								}?>
+							
+								<p>ACTU JEUX <?php echo $i; ?></p>
+									<div class="carousel-caption">
+										<img src="<?php echo $data['Image']?>" width="100%">
+									</div>
+							</div>
+
+				<?php
+						
+				}
+				?>
 			    
-			      </div>
-			    </div>
-			    <div class="item">
-			      <p>ACTU JEUX 2</p>
-			      <div class="carousel-caption">
-			       
-			      </div>
-			    </div>
-			    <div class="item">
-			      <p>ACTU JEUX 3</p>
-			      <div class="carousel-caption">
-			       
-			      </div>
-			    </div>
-			  </div>
 
 			  <!-- Controls -->
 			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
