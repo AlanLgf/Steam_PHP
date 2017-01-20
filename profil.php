@@ -1,5 +1,6 @@
  <?php session_start();?>
  <?php include("conf/db.php"); ?>
+ <?php include("header.php"); ?>
  <?php
  /*$request = $db->prepare("SELECT * FROM joueurs");
 		    $request->execute

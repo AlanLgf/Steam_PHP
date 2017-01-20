@@ -22,51 +22,7 @@
 	<?php include("conf/db.php"); ?>
 
 	<header id="header">
-		<div class="menu">
-			<section class="container">
-
-				<nav class="navbar navbar-default navbar-fixed-top ">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-fixed-top ">
-								<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
-								<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
-								<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
-								<li><a href="store.php" class="mon_scroll">STORE</a></li>
-								<li><a href="index.php" class="mon_scroll">ACTUALITÉS</a></li>
-							</ul>	
-							<ul class="nav navbar-nav navbar-right">
-
-								<li class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-									<ul class="dropdown-menu">
-										<li><a href="login.html" class="mon_scroll">LOG IN</a></li>
-										<li><a href="signin.html" class="mon_scroll">SIGN IN</a></li>
-										<li><a href="bibliotheque.html" class="mon_scroll">BIBLIOTHEQUE</a></li>
-										<li><a href="store.php" class="mon_scroll">STORE</a></li>
-										<li><a href="index.php" class="mon_scroll">ACTUALITÉS</a></li>
-									</ul>
-								</li>
-
-							</ul>
-						</div><!-- /.navbar-collapse -->
-					</div><!-- /.container-fluid -->
-				</nav>
-
-			-->
-		</section>
-	</div>
-
+		<?php include("header.php"); ?>
 </header>
 <div class="main1" id="main1">
 	<section class="container">

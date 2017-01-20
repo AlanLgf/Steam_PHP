@@ -43,6 +43,7 @@
                     if($id_member)
                     {
                         echo "Vous êtes connectés.";
+                        header("Location:index.php");
                     }
                 }
             }
