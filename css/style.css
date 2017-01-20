@@ -93,3 +93,20 @@ h1 {
    -webkit-filter: saturate(50%);
    cursor: pointer;
 }
+.img_center{
+  margin: 2em 0 2em 0;
+   box-shadow: 8px 8px 0px rgba(4, 4, 4, 0.4); 
+   -webkit-filter: blur(1px);
+   box-shadow: 1px 1px solid #000;
+   text-align: center;
+}
+.img_center:hover{
+   -webkit-filter: blur(0);
+   cursor : pointer;
+}
+.text_center{
+  color: #fff;
+  font-size: 25px;
+  margin: 25% 0 0 0;
+  text-align: center;
+}

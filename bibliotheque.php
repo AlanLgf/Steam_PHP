@@ -27,6 +27,7 @@
 		<div class="row">
 			<h1>BIBLIOTHEQUE</h1>
 			<div class="trait"></div>
+			<!--<div class="img_center img-responsive">-->
 			<?php
 $member_id=htmlspecialchars($_SESSION["id_member"]);
 		    $request=$db->prepare("SELECT joueurs_id, jeux_id, jeux.Nom, jeux.Image FROM bibliotheque JOIN jeux ON bibliotheque.jeux_id = jeux.id WHERE joueurs_id = :id");
@@ -39,13 +40,22 @@ $member_id=htmlspecialchars($_SESSION["id_member"]);
 		    );
 		    while($data = $request->fetch())
 		    {
-		    	echo "Nom du jeu : " . $data["Nom"] . "<br>";
-		    	echo  "<img src='" . $data['Image'] . "'" . "width='100%'>" ;
+		    	?>
+		    	<div class="col-md-6">
+		    	<?php
+		    	echo "<p class='text_center'> Nom du jeu : " . $data["Nom"] . "<br> </p>"; ?>
+		    	</div>
+		    	<div class="col-md-6">
+		    	<?php
+		    	echo  "<img src='" . $data['Image'] . "' class='img_center img-responsive'" . "width='100%'>" ;?>
+		    	</div>
+		    	<?php
 		    }
 
 		echo "ID du joueur : " . $member_id;
 		
 ?>
+<!--</div>-->
 		</div>
 </section>
 </div>
