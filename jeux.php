@@ -42,37 +42,17 @@
 				<div class="row">
 			<h1><?php echo $data['Nom']?></h1>
 			<div class="trait"></div>
-			<div class="col-md-6">
     	<?php
-    	echo "<p class='text_center_jeux'>Nom du jeu : " . $data["Nom"] . "<br>";
+    	echo "Nom du jeu : " . $data["Nom"] . "<br>";
     	echo "Description : " . $data["Description"] . "<br>";
     	echo "Date de mise en ligne : " . $data["Date_Mise_En_Ligne"] . "<br>";
     	echo "Version : " . $data["Version"] . "<br>";
-    	echo "Prix : " . $data["Prix"] . "<br></p>";?>
-    	</div>
-      	<div class="col-md-6">
-    	<?php
-    	echo  "<img src='" . $data['Image'] . "' class='img_center img-responsive'" . "width='100%'>";
+    	echo "Prix : " . $data["Prix"] . "<br>";
+    	echo "<img src='" . $data["Image"] . "'>" . "<br>";
     }
 
 ?>
-	<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Acheter</a>
-	</div>
-		</div>
-</section>
-</div>
-<footer id="footer">
-	<section class="container">
-		<div class="row">
-			<div class="col-md-6">		
-				
-			</div>
-			<div class="col-md-6">	
-				
-			</div>
-		</div>
-	</section>
-</footer>	
+	<a href="panier.php?id=<?php echo $id; ?>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Acheter</a>
 
 </body>
 </html>
