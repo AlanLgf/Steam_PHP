@@ -29,16 +29,32 @@
 		<div class="row">
 			<h1>STORE</h1>
 			<div class="trait"></div>
-			<div class="shop">
 			<?php
-			$jeux = array ('id', 'categorie', 'nom', 'description', 'date de mise en ligne', 'version', 'prix', 'images');
-			 $requete = $jeux->prepare("SELECT id, categorie, nom, description, date_de_mise_en_ligne, version, prix, images FROM livreor ORDER BY datemsg DESC;");
-			if (!isset($_SESSION['count'])) {
-			$_SESSION['count'] = 0;
-			} else {
-			$_SESSION['count']++;
-			}
-			?>
+
+               
+
+$request = $db->prepare("SELECT id, Image FROM jeux ");
+$request -> execute(array());
+
+
+while ($data = $request->fetch()) {
+?>
+
+
+
+			<div class="col-md-4">
+				<div class="img_jeux">
+					<a href="jeux.php?id=<?php echo $data['id']; ?>">
+						<img src="<?php echo $data['Image']?>" width="100%">
+					</a>
+				</div>
+			</div>
+
+<?php
+		
+}
+
+$request->closeCursor(); ?>
 			</div>
 		</div>
 	</div>
