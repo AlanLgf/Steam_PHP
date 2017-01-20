@@ -23,23 +23,22 @@
 		<?php include("header.php"); ?>
 </header>
 
+<a href="ajout_amis.php" class="btn btn-primary btn-lg active" role="button">Ajouter des amis</a>
 
 <?php
 
-$joueur_id = $_SESSION["id_member"];
-    
-$request = $db->prepare("SELECT Pseudo, id FROM joueurs WHERE id != :id ");
-$request -> execute(array(
-	"id"=> $joueur_id
-	));
+               
+
+$request = $db->prepare("SELECT joueurs_id1, id, Pseudo FROM amis JOIN joueurs WHERE joueurs_id1 = id");
+$request -> execute(array());
 
 while($data = $request->fetch())
     {
-    	echo "Pseudo : " . $data["Pseudo"];
+    	echo "Ami : " . $data["Pseudo"] . "<br>";
     	?>
-    	<a href="amis.php?id=<?php echo $data["id"]; ?>" class="btn btn-primary btn-lg active" role="button">Ajouter</a> <br>
     	<?php
     	
     }
-    ?>
+    
 
+$request->closeCursor(); ?>
