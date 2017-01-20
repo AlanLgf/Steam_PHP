@@ -19,9 +19,11 @@
                 				{ 
 									?>
 									<li><a href="logout.php">LOG OUT</a></li>
+								<?php } else { ?>
+								
+									<li><a href="signin.php" class="mon_scroll">SIGN IN</a></li>
+									<li><a href="login.php" class="mon_scroll">LOG IN</a></li>
 								<?php } ?>
-								<li><a href="signin.php" class="mon_scroll">SIGN IN</a></li>
-								<li><a href="login.php" class="mon_scroll">LOG IN</a></li>
 								<?php if(isset($_SESSION["id_member"]))
                 				{ 
 									?>
