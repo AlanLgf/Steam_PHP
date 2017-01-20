@@ -42,13 +42,20 @@
 				<div class="row">
 			<h1><?php echo $data['Nom']?></h1>
 			<div class="trait"></div>
+			<div class="col-md-6">
     	<?php
-    	echo "Nom du jeu : " . $data["Nom"] . "<br>";
+    	echo "<p class='text_center_jeux'>Nom du jeu : " . $data["Nom"] . "<br>";
     	echo "Description : " . $data["Description"] . "<br>";
     	echo "Date de mise en ligne : " . $data["Date_Mise_En_Ligne"] . "<br>";
     	echo "Version : " . $data["Version"] . "<br>";
-    	echo "Prix : " . $data["Prix"] . "<br>";
-    	echo "<img src='" . $data["Image"] . "'>" . "<br>";
+    	echo "Prix : " . $data["Prix"] . "<br>";?>
+    	</div>
+    	<div class="col-md-6">
+    	<?php
+    	echo "<img src='" . $data["Image"] .  "' class='img_center img-responsive'" . "<br></p>";
+    	?>
+    	</div>
+    	<?php
     }
 
 ?>

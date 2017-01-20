@@ -60,7 +60,7 @@
 		                <h4>Date d'inscription : </h4><p><?php echo $data["Date_Inscription"]; ?></p>
 		                <h4>Adresse : </h4><p><?php echo $data["Adresse"]; ?>, <?php echo $data["Ville"]; ?></p>
 		                <h4>Téléphone : </h4><p><?php echo $data["Téléphone"]; ?></p>
-		                <hr>
+		           
 		            </div>
 		        </div>
 		        <?php                    
