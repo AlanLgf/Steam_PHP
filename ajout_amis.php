@@ -28,16 +28,17 @@
 
 $joueur_id = $_SESSION["id_member"];
     
-$request = $db->prepare("SELECT Pseudo FROM joueurs WHERE Pseudo != $joueur_id ");
-$request -> execute(array());
+$request = $db->prepare("SELECT Pseudo, id FROM joueurs WHERE id != :id ");
+$request -> execute(array(
+	"id"=> $joueur_id
+	));
 
 while($data = $request->fetch())
     {
     	echo "Pseudo : " . $data["Pseudo"];
     	?>
-    	<a href="#" class="btn btn-primary" role="button" aria-pressed="true">Ajouter</a> <br>
+    	<a href="amis.php?id=<?php echo $data["id"]; ?>" class="btn btn-primary btn-lg active" role="button">Ajouter</a> <br>
     	<?php
-    	
     	
     }
     ?>
