@@ -22,3 +22,28 @@
 <?php include("conf/db.php"); ?>
 <?php include("header.php"); ?>
 
+<?php
+
+	$id = htmlspecialchars($_GET["id"]);
+	$request = $db->prepare("SELECT Nom, Description, Date_Mise_En_Ligne, Version, Prix, Image FROM jeux WHERE jeux.id = :id");
+        $request->execute
+        (
+            array
+            (
+                "id"=>$id
+            )
+        );
+    while($data = $request->fetch())
+    {
+    	echo "Nom du jeu : " . $data["Nom"] . "<br>";
+    	echo "Description : " . $data["Description"] . "<br>";
+    	echo "Date de mise en ligne : " . $data["Date_Mise_En_Ligne"] . "<br>";
+    	echo "Version : " . $data["Version"] . "<br>";
+    	echo "Prix : " . $data["Prix"] . "<br>";
+    	echo "<img src='" . $data["Image"] . "'>" . "<br>";
+    }
+
+?>
+
+</body>
+</html>
