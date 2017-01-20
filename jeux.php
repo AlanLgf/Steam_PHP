@@ -35,6 +35,14 @@
         );
     while($data = $request->fetch())
     {
+    	?>
+
+		 <div class="main1" id="main1">
+			<section class="container">
+				<div class="row">
+			<h1><?php echo $data['Nom']?></h1>
+			<div class="trait"></div>
+    	<?php
     	echo "Nom du jeu : " . $data["Nom"] . "<br>";
     	echo "Description : " . $data["Description"] . "<br>";
     	echo "Date de mise en ligne : " . $data["Date_Mise_En_Ligne"] . "<br>";
