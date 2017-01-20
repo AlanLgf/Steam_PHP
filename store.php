@@ -36,6 +36,11 @@
 $request = $db->prepare("SELECT id, Image FROM jeux ");
 $request -> execute(array());
 
+$request = $db->prepare("SELECT id_jeux, NomCatégorie  FROM catégorie JOIN jeux WHERE catégorie.id_jeux = jeux.id ");
+$request -> execute(
+	array(
+		)
+	);
 
 while ($data = $request->fetch()) {
 ?>
@@ -43,6 +48,7 @@ while ($data = $request->fetch()) {
 
 
 			<div class="col-md-4">
+			<?php echo $data['NomCatégorie']; ?>
 				<div class="img_jeux">
 					<a href="jeux.php?id=<?php echo $data['id']; ?>">
 						<img src="<?php echo $data['Image']?>" width="100%">
